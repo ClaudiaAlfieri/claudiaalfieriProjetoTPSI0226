@@ -19,3 +19,10 @@ def validar_password(password):
         return False
     return True
 
+#Validação de data utilizando regex (data deve ter o formato dd-mm-aaaa)
+
+def validar_data(data):
+    padrao = r"\d{2}-\d{2}-\d{4}$"
+    if re.match(padrao, data):
+        return True
+    return False
