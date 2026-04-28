@@ -1,0 +1,4 @@
+[
+{ "id": 1, "titulo": "Harry Potter e a Pedra Filosofal", "tipo": "filme", "genero": "fantasia/aventura", "ano": 2001, "plataforma": "HBO Max", "nota": 8.0, "data_visualizacao": "20-04-2026", "comentario": "Início mágico da saga, muito fiel ao livro e com ótima introdução ao universo."},
+{ "id": 2, "titulo": "O Senhor dos Anéis: A Sociedade do Anel", "tipo": "filme", "genero": "fantasia/aventura", "ano": 2001, "plataforma": "Amazon Prime Video", "nota": 9.0, "data_visualizacao": "22-04-2026", "comentario": "Uma jornada épica com construção de mundo impressionante e personagens memoráveis."}
+]
