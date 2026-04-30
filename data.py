@@ -9,3 +9,10 @@ def carregar_filmes():
     except FileNotFoundError:
         return []
     
+#Função para guardar os filmes no ficheiro JSON
+def guardar_filmes(filmes):    
+    try:
+        with open("filmes.json", "w") as ficheiro:
+            json.dump(filmes, ficheiro)
+    except (PermissionError, IOError):
+        print("Erro ao guardar os dados.")
