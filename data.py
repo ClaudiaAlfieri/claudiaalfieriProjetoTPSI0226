@@ -16,3 +16,13 @@ def guardar_filmes(filmes):
             json.dump(filmes, ficheiro)
     except (PermissionError, IOError):
         print("Erro ao guardar os dados.")
+        
+#Função para carregar o ficheiro JSON
+def carregar_config():
+    try:
+        with open("config.json", "r") as ficheiro:
+            config = json.load(ficheiro)
+            return config
+    except FileNotFoundError:
+        print("Erro: ficheiro config.json não encontrado.")
+        exit()
