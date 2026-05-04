@@ -1,6 +1,6 @@
-#Validação de email utilizando regex (email deve ter o formato nome@dominio.com)
-
 import re
+
+#Validação de email utilizando regex (email deve ter o formato nome@dominio.com)
 
 def validar_email(email):
     padrao = r"\w+@\w+\.\w+$"
