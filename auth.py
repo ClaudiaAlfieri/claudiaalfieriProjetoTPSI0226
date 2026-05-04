@@ -17,7 +17,7 @@ def login():
             if validar_password(password):
                 break  
             else:
-                print("Password inválido. Tente novamente.")
+                print("Password inválida. Tente novamente.")
 
         if email == config["email"] and password == config["pass"]:
             return True
