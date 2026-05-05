@@ -3,7 +3,7 @@ import json
 #Função para carregar os filmes do ficheiro JSON
 def carregar_filmes():    
     try:
-        with open("filmes.json", "r") as ficheiro:
+        with open("filmes.json", "r", encoding="utf-8") as ficheiro:
             filmes = json.load(ficheiro)
             return filmes
     except FileNotFoundError:
@@ -12,15 +12,15 @@ def carregar_filmes():
 #Função para guardar os filmes no ficheiro JSON
 def guardar_filmes(filmes):    
     try:
-        with open("filmes.json", "w") as ficheiro:
-            json.dump(filmes, ficheiro)
+        with open("filmes.json", "w", encoding="utf-8") as ficheiro:
+            json.dump(filmes, ficheiro, indent=4, ensure_ascii=False)
     except (PermissionError, IOError):
         print("Erro ao guardar os dados.")
         
 #Função para carregar o ficheiro JSON
 def carregar_config():
     try:
-        with open("config.json", "r") as ficheiro:
+        with open("config.json", "r", encoding="utf-8") as ficheiro:
             config = json.load(ficheiro)
             return config
     except FileNotFoundError:
