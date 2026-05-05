@@ -13,3 +13,39 @@ def ver_filmes(filmes):
         print(f"Data de visualização: {filme['data_visualizacao']}")
         print(f"Comentário: {filme['comentario']}")
         print("----------------------------")
+        
+#Função para adicionar um filme
+
+def adicionar_filme(filmes):
+    if len(filmes) == 0:
+        novo_id = 1
+    else:
+        novo_id = filmes[-1]["id"] + 1
+    titulo = input("Título: ")
+    tipo = input("Tipo: ")
+    genero = input("Género: ")
+    ano = input("Ano: ")
+    plataforma = input("Plataforma: ")
+    nota = input("Nota: ")
+    while True:
+        data = input("Data de visualização (DD-MM-AAAA): ")
+        if validar_data(data):
+            break
+        else:
+            print("Data inválida. Tente novamente.")
+    comentario = input("Comentário: ")
+    
+    novo_filme = {
+    "id": novo_id,
+    "titulo": titulo,
+    "tipo": tipo,
+    "genero": genero,
+    "ano": ano,
+    "plataforma": plataforma,
+    "nota": nota,
+    "data_visualizacao": data,
+    "comentario": comentario    
+    }
+    
+    filmes.append(novo_filme)
+    return filmes
