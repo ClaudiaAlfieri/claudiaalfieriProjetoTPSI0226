@@ -49,3 +49,21 @@ def adicionar_filme(filmes):
     
     filmes.append(novo_filme)
     return filmes
+
+#Função para apagar filmes
+
+def apagar_filme(filmes):
+    filme_apagar = int(input("Id do filme que deseja apagar: "))
+    for filme in filmes:
+        if filme["id"] == filme_apagar:
+            ver_filmes([filme])
+            confirmacao = input("Tens a certeza? (S/N): ")
+            if confirmacao == "S":
+                filmes.remove(filme)
+                print("Filme apagado!")
+            else:
+                print("Operação cancelada.")
+            return filmes
+    print("Filme não encontrado.")
+    return filmes
+            
