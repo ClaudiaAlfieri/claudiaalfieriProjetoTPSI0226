@@ -1,3 +1,5 @@
+from validate import validar_data
+
 #Função para receber a lista de filmes e mostrar no ecrã
 
 def ver_filmes(filmes):
@@ -67,3 +69,53 @@ def apagar_filme(filmes):
     print("Filme não encontrado.")
     return filmes
             
+#Função para editar filmes
+
+def editar_filme(filmes):
+    filme_id = int(input("Id do filme que deseja editar: "))
+    for filme in filmes:
+        if filme["id"] == filme_id:
+            ver_filmes([filme])
+            print("1. Título")           
+            print("2. Tipo")            
+            print("3. Género")           
+            print("4. Ano")         
+            print("5. Plataforma")           
+            print("6. Nota")            
+            print("7. Data da visualização")       
+            print("8. Comentário")
+           
+            editar = input("Qual campo deseja editar? ")
+            if editar == "1":
+                novo_valor = input("Novo título: ")
+                filme["titulo"] = novo_valor
+            elif editar == "2":
+                novo_valor = input("Novo tipo: ")
+                filme["tipo"] = novo_valor
+            elif editar == "3":
+                novo_valor = input("Novo género: ")
+                filme["genero"] = novo_valor
+            elif editar == "4":
+                novo_valor = input("Novo ano: ")
+                filme["ano"] = novo_valor
+            elif editar == "5":
+                novo_valor = input("Nova plataforma: ")
+                filme["plataforma"] = novo_valor
+            elif editar == "6":
+                novo_valor = input("Nova nota: ")
+                filme["nota"] = novo_valor
+            elif editar == "7":
+                while True:
+                    novo_valor = input("Nova data (DD-MM-AAAA): ")
+                    if validar_data(novo_valor):
+                        filme["data_visualizacao"] = novo_valor
+                        break
+                    else:
+                        print("Data inválida. Tente novamente.")  
+            elif editar == "8":
+                novo_valor = input("Novo comentário: ")
+                filme["comentario"] = novo_valor   
+                
+            return filmes
+    print("Filme não encontrado.")
+    return filmes
