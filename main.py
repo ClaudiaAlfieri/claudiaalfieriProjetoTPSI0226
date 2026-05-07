@@ -1,7 +1,9 @@
 from data import carregar_filmes, guardar_filmes
 from auth import login
 from menus import mostrar_menu
-from filmes import ver_filmes, adicionar_filme, apagar_filme
+from filmes import ver_filmes, adicionar_filme, apagar_filme, editar_filme
+from search import pesquisar_filme
+from sort import ordenar_filme
 
 filmes = []
 
@@ -16,14 +18,16 @@ while True:
     elif opcao == "2":
         filmes = adicionar_filme(filmes)
     elif opcao == "3":
-        editar_filme()
+        filmes = editar_filme(filmes)
     elif opcao == "4":
         filmes = apagar_filme(filmes)
     elif opcao == "5":
-        pesquisar_filme()
+        pesquisar_filme(filmes)            
     elif opcao == "6":
         guardar_filmes(filmes)
     elif opcao == "7":
+        filmes = ordenar_filme(filmes)
+    elif opcao == "8":
         salvar = input("Deseja guardar (S/N)? ")
         if salvar == "S":
             guardar_filmes(filmes)
