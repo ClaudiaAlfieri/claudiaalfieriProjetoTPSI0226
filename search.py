@@ -1,4 +1,6 @@
-#Função par pesquisa_linear()
+from filmes import ver_filmes
+
+#Função para pesquisa_linear()
 
 def pesquisa_linear(filmes, termo):
     resultados = []
@@ -8,7 +10,7 @@ def pesquisa_linear(filmes, termo):
     return resultados
 
 
-#Função par pesquisa_binaria()
+#Função para pesquisa_binaria()
 
 def pesquisa_binaria(filmes, ano):
     esquerda = 0
@@ -22,3 +24,26 @@ def pesquisa_binaria(filmes, ano):
         elif filmes[meio]["ano"] > ano:
             direita = meio - 1
     return []
+
+#Função para coordenar os dois tipos de pesquisa (linear e binaria)
+
+def pesquisar_filme(filmes):
+    print("1. Pesquisa por título (linear)")
+    print("2. Pesquisa por ano (binária)")
+    opcao = input("Escolha: ")   
+    if opcao == "1":
+        termo = input("Título a pesquisar: ")
+        resultados = pesquisa_linear(filmes, termo)
+        if not resultados:
+            print("Nenhum filme encontrado.")
+        else:
+            ver_filmes(resultados)
+    elif opcao == "2":
+        ano = int(input("Ano a pesquisar: "))
+        resultados = pesquisa_binaria(filmes, ano)
+        if not resultados:
+            print("Nenhum filme encontrado.")
+        else:
+            ver_filmes(resultados)
+        
+        
