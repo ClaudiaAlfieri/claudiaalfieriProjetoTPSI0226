@@ -1,3 +1,5 @@
+from filmes import ver_filmes
+
 # Função para calcular a média das notas
 
 def media_notas(filmes):
@@ -65,7 +67,24 @@ def filtrar_filmes(filmes):
         print("Nenhum filme encontrado.")
     else:
         ver_filmes(resultados)
-           
-    
-    
+        
+# Função para mostrar as estatisticas
 
+def mostrar_estatisticas(filmes):
+    print("1. Média das notas")
+    print("2. Nota mais alta e mais baixa")   
+    print("3. Total por tipo")
+    print("4. Filtrar filmes")
+    opcao = input("Escolha: ")   
+    if opcao == "1":        
+        media_notas(filmes)            
+    elif opcao == "2":
+        maior, menor = nota_maxima_minima(filmes)
+        print("Nota mais alta:")
+        ver_filmes([maior])
+        print("Nota mais baixa:")
+        ver_filmes([menor])
+    elif opcao == "3":
+        total_por_tipo(filmes)
+    elif opcao == "4":
+        filtrar_filmes(filmes)
