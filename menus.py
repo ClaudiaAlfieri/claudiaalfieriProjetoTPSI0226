@@ -9,7 +9,8 @@ def mostrar_menu():
     print("5. Pesquisar filme")
     print("6. Guardar filme")
     print("7. Ordenar filmes")
-    print("8. Sair")
+    print("8. Estatísticas")
+    print("9. Sair")
     print("============================")     
     opcao = input("Escolha uma opção: ")
     return opcao
