@@ -4,6 +4,7 @@ from menus import mostrar_menu
 from filmes import ver_filmes, adicionar_filme, apagar_filme, editar_filme
 from search import pesquisar_filme
 from sort import ordenar_filme
+from estatisticas import mostrar_estatisticas
 
 filmes = []
 
@@ -28,6 +29,8 @@ while True:
     elif opcao == "7":
         filmes = ordenar_filme(filmes)
     elif opcao == "8":
+        mostrar_estatisticas(filmes)
+    elif opcao == "9":
         salvar = input("Deseja guardar (S/N)? ")
         if salvar == "S":
             guardar_filmes(filmes)
