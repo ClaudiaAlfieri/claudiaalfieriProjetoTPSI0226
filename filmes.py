@@ -24,7 +24,17 @@ def adicionar_filme(filmes):
     else:
         novo_id = filmes[-1]["id"] + 1
     titulo = input("Título: ")
-    tipo = input("Tipo: ")
+    print("Tipo:")
+    print("1. Filme")
+    print("2. Série")
+    tipo_opcao = input("Escolha: ")
+    if tipo_opcao == "1":
+        tipo = "filme"
+    elif tipo_opcao == "2":
+        tipo = "série"
+    else:
+        print("Opção inválida.")
+        return filmes
     genero = input("Género: ")
     ano = input("Ano: ")
     plataforma = input("Plataforma: ")
