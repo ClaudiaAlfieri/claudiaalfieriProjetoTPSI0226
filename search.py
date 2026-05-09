@@ -1,4 +1,5 @@
 from filmes import ver_filmes
+from sort import bubble_sort
 
 #Função para pesquisa_linear()
 
@@ -38,7 +39,8 @@ def pesquisar_filme(filmes):
             print("Nenhum filme encontrado.")
         else:
             ver_filmes(resultados)
-    elif opcao == "2":
+    elif opcao == "2":        
+        filmes = bubble_sort(filmes, "ano")
         ano = int(input("Ano a pesquisar: "))
         resultados = pesquisa_binaria(filmes, ano)
         if not resultados:
