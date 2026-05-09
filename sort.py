@@ -48,3 +48,4 @@ def ordenar_filme(filmes):
     if ordem == "D":
         resultados.reverse()
     ver_filmes(resultados)
+    return filmes
