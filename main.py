@@ -26,12 +26,13 @@ while True:
         pesquisar_filme(filmes)            
     elif opcao == "6":
         guardar_filmes(filmes)
+        print("Dados guardados com sucesso!")
     elif opcao == "7":
         filmes = ordenar_filme(filmes)
     elif opcao == "8":
         mostrar_estatisticas(filmes)
     elif opcao == "9":
-        salvar = input("Deseja guardar (S/N)? ")
+        salvar = input("Deseja guardar (S/N)? ").upper()
         if salvar == "S":
             guardar_filmes(filmes)
             break
