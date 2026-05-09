@@ -69,7 +69,7 @@ def apagar_filme(filmes):
     for filme in filmes:
         if filme["id"] == filme_apagar:
             ver_filmes([filme])
-            confirmacao = input("Tens a certeza? (S/N): ")
+            confirmacao = input("Tens a certeza? (S/N): ").upper()
             if confirmacao == "S":
                 filmes.remove(filme)
                 print("Filme apagado!")
