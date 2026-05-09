@@ -3,6 +3,7 @@ from validate import validar_data
 #Função para receber a lista de filmes e mostrar no ecrã
 
 def ver_filmes(filmes):
+    print()
     for filme in filmes:
         print("----------------------------")
         print(f"ID: {filme['id']}")
