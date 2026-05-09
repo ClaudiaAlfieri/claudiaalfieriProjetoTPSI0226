@@ -10,6 +10,7 @@ def media_notas(filmes):
     for filme in filmes:
         total += filme["nota"]
     media = total / len(filmes)
+    print(f"Média das notas: {media:.1f}")
     return media
 
 # Função para verificar a nota mais alta e mais baixa
