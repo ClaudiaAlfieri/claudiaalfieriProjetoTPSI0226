@@ -19,7 +19,10 @@ def login():
             else:
                 print("Password inválida. Tente novamente.")
 
-        if email == config["email"] and password == config["pass"]:
-            return True
-        else:
-            print("Email ou password incorretos. Tente novamente.")
+        if email != config["email"]:
+            print("Email incorreto. Tente novamente.")
+            continue
+        if password != config["pass"]:
+            print("Password incorreta. Tente novamente.")
+            continue
+        return True
