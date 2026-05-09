@@ -37,7 +37,7 @@ def ordenar_filme(filmes):
         campo = "nota"
     elif campo == "3":
         campo = "titulo"
-    ordem = input("Ordem (C-Crescente / D-Decrescente): ")    
+    ordem = input("Ordem (C-Crescente / D-Decrescente): ").upper()   
     print("1. Ordenar por Bubble Sort (compara e troca elementos vizinhos)")
     print("2. Ordenar por Selection Sort (procura o menor e coloca no início)")
     opcao = input("Escolha: ")       
