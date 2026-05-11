@@ -2,16 +2,28 @@
 
 def mostrar_menu():   
     print()
-    print("========== PyFlix ==========")
-    print("1. Ver lista de filmes")
-    print("2. Adicionar filme")
-    print("3. Editar filme")
-    print("4. Apagar filme")
-    print("5. Pesquisar filme")
-    print("6. Guardar filme")
-    print("7. Ordenar filmes")
-    print("8. Estatísticas")
-    print("9. Sair")
-    print("============================")     
+    print("==========================================") 
+    print(r"""
+     _____         ______  _  _       
+    |  __ \       |  ____|| |(_)      
+    | |__) |_   _ | |__   | | _ __  __
+    |  ___/| | | ||  __|  | || |\ \/ /
+    | |    | |_| || |     | || | >  < 
+    |_|     \__, ||_|     |_||_|/_/\_\
+            __/ |                    
+            |___/                     
+    """)
+    print("==========================================") 
+    print("           1. Ver lista de filmes")
+    print("           2. Adicionar filme")
+    print("           3. Editar")
+    print("           4. Apagar")
+    print("           5. Pesquisar")
+    print("           6. Guardar")
+    print("           7. Ordenar")
+    print("           8. Estatísticas")
+    print("           9. Exportar filmes")
+    print("           10. Sair")
+    print("==========================================")     
     opcao = input("Escolha uma opção: ")
     return opcao
