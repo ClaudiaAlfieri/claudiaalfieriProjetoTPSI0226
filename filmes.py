@@ -1,4 +1,5 @@
 from validate import validar_data
+from logs import registar_log
 
 #Função para receber a lista de filmes e mostrar no ecrã
 
@@ -61,6 +62,7 @@ def adicionar_filme(filmes):
     }
     
     filmes.append(novo_filme)
+    registar_log(f"Filme adicionado: {titulo}")
     return filmes
 
 #Função para apagar filmes
@@ -73,11 +75,12 @@ def apagar_filme(filmes):
             confirmacao = input("Tens a certeza? (S/N): ").upper()
             if confirmacao == "S":
                 filmes.remove(filme)
+                registar_log(f"Filme apagado: ID {filme_apagar}")
                 print("Filme apagado!")
             else:
                 print("Operação cancelada.")
             return filmes
-    print("Filme não encontrado.")
+    print("Filme não encontrado.")    
     return filmes
             
 #Função para editar filmes
@@ -126,7 +129,7 @@ def editar_filme(filmes):
             elif editar == "8":
                 novo_valor = input("Novo comentário: ")
                 filme["comentario"] = novo_valor   
-                
+            registar_log(f"Filme editado: ID {filme_id}")                
             return filmes
-    print("Filme não encontrado.")
+    print("Filme não encontrado.")   
     return filmes
