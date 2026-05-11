@@ -1,5 +1,6 @@
 from data import carregar_config
 from validate import validar_email, validar_password
+from logs import registar_log
 
 #Login
 def login():
@@ -25,4 +26,5 @@ def login():
         if password != config["pass"]:
             print("Password incorreta. Tente novamente.")
             continue
+        registar_log("Utilizador fez login")
         return True
