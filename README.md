@@ -4,14 +4,13 @@
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![JSON](https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 ![ATEC](https://img.shields.io/badge/Training-TPSI%20%7C%20ATEC-darkgreen?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-In%20progress-brightgreen?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
 
 > Aplicação em Python desenvolvida como projeto final da disciplina de Programação do curso CET TPSI na ATEC.
-> 
->  O PyFlix é um sistema de gestão pessoal de filmes e séries com interface em linha de comandos (CLI).
+>
+> O PyFlix é um sistema de gestão pessoal de filmes e séries com interface em linha de comandos (CLI).
 
 ---
 
@@ -33,11 +32,13 @@ O objetivo é implementar um sistema de gestão completo com registo, validaçã
 | ✏️ Editar | Atualização de qualquer campo com validação |
 | 🗑️ Apagar | Remoção com confirmação do utilizador |
 | 🔍 Pesquisa Linear | Pesquisa por título — percorre a lista completa |
-| 🔍 Pesquisa Binária | Pesquisa por ano — divide a lista ao meio (requer ordenação) |
+| 🔍 Pesquisa Binária | Pesquisa por ano — divide a lista ao meio (ordenação automática) |
 | 📊 Bubble Sort | Ordenação por comparação de elementos vizinhos |
 | 📊 Selection Sort | Ordenação por seleção do menor elemento |
 | 📈 Estatísticas | Média, máximo/mínimo, total por tipo e filtros |
 | 💾 Persistência | Dados guardados e carregados automaticamente em JSON |
+| 📤 Exportação CSV | Exportação da lista para ficheiro compatível com Excel |
+| 📝 Logs de Atividade | Registo automático de todas as ações com data e hora |
 
 ---
 
@@ -53,7 +54,9 @@ pyflix/
 ├── validate.py      # Validações com expressões regulares (regex)
 ├── search.py        # Algoritmos de pesquisa (linear e binária)
 ├── sort.py          # Algoritmos de ordenação (Bubble e Selection Sort)
-└── estatisticas.py  # Estatísticas e filtros
+├── estatisticas.py  # Estatísticas e filtros
+├── exportar.py      # Exportação de dados para CSV
+└── logs.py          # Registo de atividade
 ```
 
 ---
@@ -84,7 +87,7 @@ cd claudiaalfieriProjetoTPSI0226
 python main.py
 ```
 
-> Não são necessárias instalações adicionais — o projeto usa apenas bibliotecas nativas do Python (`json`, `re`).
+> Não são necessárias instalações adicionais — o projeto usa apenas bibliotecas nativas do Python (`json`, `re`, `csv`, `datetime`).
 
 ---
 
@@ -92,7 +95,9 @@ python main.py
 
 - **Python 3** — linguagem principal
 - **JSON** — persistência de dados
+- **CSV** — exportação de dados para Excel
 - **Regex (re)** — validação de email, password e data
+- **datetime** — registo de data e hora nos logs
 - **Git** — controlo de versão
 - **GitHub** — repositório remoto
 
@@ -102,7 +107,7 @@ python main.py
 
 | Conceito | Descrição |
 |---|---|
-| 🧩 Modularização | 9 ficheiros com responsabilidades separadas |
+| 🧩 Modularização | 11 ficheiros com responsabilidades separadas |
 | 🔎 Pesquisa Linear | Percorre a lista completa elemento a elemento |
 | 🔎 Pesquisa Binária | Divide a lista ao meio a cada comparação |
 | 📊 Bubble Sort | Compara e troca elementos vizinhos sucessivamente |
@@ -110,6 +115,8 @@ python main.py
 | ✅ Regex | Validação de formato de email, password e data |
 | 💾 Persistência JSON | Dados carregados ao iniciar e guardados ao sair |
 | ⚠️ Exceções | Tratamento de erros com try/except em operações de ficheiros |
+| 📤 Exportação CSV | Lista exportada para ficheiro compatível com Excel |
+| 📝 Logs | Registo automático de ações com data e hora |
 
 ---
 
