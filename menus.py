@@ -23,7 +23,8 @@ def mostrar_menu():
     print("           7. Ordenar")
     print("           8. Estatísticas")
     print("           9. Exportar filmes")
-    print("           10. Sair")
+    print("           10. Ver logs")
+    print("           11. Sair")
     print("==========================================")     
     opcao = input("Escolha uma opção: ")
     return opcao
