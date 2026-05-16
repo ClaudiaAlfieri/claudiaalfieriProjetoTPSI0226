@@ -38,9 +38,9 @@ def adicionar_filme(filmes):
         print("Opção inválida.")
         return filmes
     genero = input("Género: ")
-    ano = input("Ano: ")
+    ano = int(input("Ano: "))
     plataforma = input("Plataforma: ")
-    nota = input("Nota: ")
+    nota = float(input("Nota: "))
     while True:
         data = input("Data de visualização (DD-MM-AAAA): ")
         if validar_data(data):
