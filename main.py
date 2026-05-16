@@ -6,6 +6,7 @@ from search import pesquisar_filme
 from sort import ordenar_filme
 from estatisticas import mostrar_estatisticas
 from exportar import exportar_csv
+from logs import ver_logs
 
 filmes = []
 
@@ -35,6 +36,8 @@ while True:
     elif opcao == "9":
         exportar_csv(filmes)
     elif opcao == "10":
+        ver_logs()
+    elif opcao == "11":
         salvar = input("Deseja guardar (S/N)? ").upper()
         if salvar == "S":
             guardar_filmes(filmes)
