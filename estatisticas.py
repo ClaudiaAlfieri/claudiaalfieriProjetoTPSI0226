@@ -69,7 +69,7 @@ def filtrar_filmes(filmes):
     else:
         ver_filmes(resultados)
         
-# Função para mostrar as estatisticas
+# Função para coordenar as funções de estatisticas
 
 def mostrar_estatisticas(filmes):
     print("1. Média das notas")
