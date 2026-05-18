@@ -1,6 +1,6 @@
 # claudiaalfieriProjetoTPSI0226
 
-# 🎬 PyFlix - Sistema de Gestão de Filmes e Séries
+# 🎬 PyFlix - Movie & Series Management System
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![JSON](https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white)
@@ -8,60 +8,60 @@
 ![ATEC](https://img.shields.io/badge/Training-TPSI%20%7C%20ATEC-darkgreen?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
 
-> Aplicação em Python desenvolvida como projeto final da disciplina de Programação do curso CET TPSI na ATEC.
+> Python application developed as the final project for the Python Programming course of the CET TPSI program at ATEC.
 >
-> O PyFlix é um sistema de gestão pessoal de filmes e séries com interface em linha de comandos (CLI).
+> PyFlix is a personal movie and series management system with a command-line interface (CLI).
 
 ---
 
-## 📌 Sobre o Projeto
+## 📌 About the Project
 
-O **PyFlix** foi desenvolvido como projeto final da unidade curricular de **Programação em Python** do programa **CET TPSI** na **ATEC — Training Academy**.
+**PyFlix** was developed as the final project for the **Python Programming** course unit of the **CET TPSI** program at **ATEC — Training Academy**.
 
-O objetivo é implementar um sistema de gestão completo com registo, validação, armazenamento e manipulação de dados de forma persistente, aplicando os conceitos lecionados ao longo do curso.
+The goal is to implement a complete management system with registration, validation, storage, and persistent data manipulation, applying the concepts taught throughout the course.
 
 ---
 
-## ✨ Funcionalidades
+## ✨ Features
 
-| Funcionalidade | Descrição |
+| Feature | Description |
 |---|---|
-| 🔐 Autenticação | Login com validação de email e password por regex |
-| 📋 Listagem | Visualização completa de todos os registos |
-| ➕ Adicionar | Registo de novos filmes/séries com validação de dados |
-| ✏️ Editar | Atualização de qualquer campo com validação |
-| 🗑️ Apagar | Remoção com confirmação do utilizador |
-| 🔍 Pesquisa Linear | Pesquisa por título — percorre a lista completa |
-| 🔍 Pesquisa Binária | Pesquisa por ano — divide a lista ao meio (ordenação automática) |
-| 📊 Bubble Sort | Ordenação por comparação de elementos vizinhos |
-| 📊 Selection Sort | Ordenação por seleção do menor elemento |
-| 📈 Estatísticas | Média, máximo/mínimo, total por tipo e filtros |
-| 💾 Persistência | Dados guardados e carregados automaticamente em JSON |
-| 📤 Exportação CSV | Exportação da lista para ficheiro compatível com Excel |
-| 📝 Logs de Atividade | Registo automático de todas as ações com data e hora |
+| 🔐 Authentication | Login with email and password validation via regex |
+| 📋 Listing | Full view of all registered entries |
+| ➕ Add | Register new movies/series with data validation |
+| ✏️ Edit | Update any field with validation |
+| 🗑️ Delete | Removal with user confirmation |
+| 🔍 Linear Search | Search by title — traverses the entire list |
+| 🔍 Binary Search | Search by year — splits the list in half (automatic sorting) |
+| 📊 Bubble Sort | Sorting by comparing neighbouring elements |
+| 📊 Selection Sort | Sorting by selecting the smallest element |
+| 📈 Statistics | Average, max/min, total by type, and filters |
+| 💾 Persistence | Data automatically saved and loaded in JSON |
+| 📤 CSV Export | Export the list to an Excel-compatible file |
+| 📝 Activity Logs | Automatic logging of all actions with date and time |
 
 ---
 
-## 🗂️ Estrutura do Projeto
+## 🗂️ Project Structure
 
 ```
 pyflix/
-├── main.py          # Ponto de entrada — coordena o programa
-├── auth.py          # Autenticação e login
-├── menus.py         # Interface de menus CLI
-├── filmes.py        # Operações CRUD (criar, ler, editar, apagar)
-├── data.py          # Persistência de dados em JSON
-├── validate.py      # Validações com expressões regulares (regex)
-├── search.py        # Algoritmos de pesquisa (linear e binária)
-├── sort.py          # Algoritmos de ordenação (Bubble e Selection Sort)
-├── estatisticas.py  # Estatísticas e filtros
-├── exportar.py      # Exportação de dados para CSV
-└── logs.py          # Registo de atividade
+├── main.py          # Entry point — coordinates the program
+├── auth.py          # Authentication and login
+├── menus.py         # CLI menu interface
+├── filmes.py        # CRUD operations (create, read, edit, delete)
+├── data.py          # JSON data persistence
+├── validate.py      # Validation with regular expressions (regex)
+├── search.py        # Search algorithms (linear and binary)
+├── sort.py          # Sorting algorithms (Bubble and Selection Sort)
+├── estatisticas.py  # Statistics and filters
+├── exportar.py      # Data export to CSV
+└── logs.py          # Activity logging
 ```
 
 ---
 
-## 🔐 Credenciais de Teste
+## 🔐 Test Credentials
 
 ```
 Email:    admin@pyflix.com
@@ -70,60 +70,60 @@ Password: Admin123
 
 ---
 
-## ▶️ Como Executar
+## ▶️ How to Run
 
-1. Clona o repositório:
+1. Clone the repository:
 ```bash
 git clone https://github.com/ClaudiaAlfieri/claudiaalfieriProjetoTPSI0226.git
 ```
 
-2. Entra na pasta do projeto:
+2. Navigate to the project folder:
 ```bash
 cd claudiaalfieriProjetoTPSI0226
 ```
 
-3. Executa o programa:
+3. Run the program:
 ```bash
 python main.py
 ```
 
-> Não são necessárias instalações adicionais — o projeto usa apenas bibliotecas nativas do Python (`json`, `re`, `csv`, `datetime`).
+> No additional installations required — the project uses only Python's native libraries (`json`, `re`, `csv`, `datetime`).
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Technologies Used
 
-- **Python 3** — linguagem principal
-- **JSON** — persistência de dados
-- **CSV** — exportação de dados para Excel
-- **Regex (re)** — validação de email, password e data
-- **datetime** — registo de data e hora nos logs
-- **Git** — controlo de versão
-- **GitHub** — repositório remoto
+- **Python 3** — main language
+- **JSON** — data persistence
+- **CSV** — data export to Excel
+- **Regex (re)** — email, password, and date validation
+- **datetime** — date and time logging
+- **Git** — version control
+- **GitHub** — remote repository
 
 ---
 
-## 📐 Conceitos Aplicados
+## 📐 Concepts Applied
 
-| Conceito | Descrição |
+| Concept | Description |
 |---|---|
-| 🧩 Modularização | 11 ficheiros com responsabilidades separadas |
-| 🔎 Pesquisa Linear | Percorre a lista completa elemento a elemento |
-| 🔎 Pesquisa Binária | Divide a lista ao meio a cada comparação |
-| 📊 Bubble Sort | Compara e troca elementos vizinhos sucessivamente |
-| 📊 Selection Sort | Procura o menor elemento e coloca-o na posição correta |
-| ✅ Regex | Validação de formato de email, password e data |
-| 💾 Persistência JSON | Dados carregados ao iniciar e guardados ao sair |
-| ⚠️ Exceções | Tratamento de erros com try/except em operações de ficheiros |
-| 📤 Exportação CSV | Lista exportada para ficheiro compatível com Excel |
-| 📝 Logs | Registo automático de ações com data e hora |
+| 🧩 Modularisation | 11 files with separate responsibilities |
+| 🔎 Linear Search | Traverses the full list element by element |
+| 🔎 Binary Search | Splits the list in half at each comparison |
+| 📊 Bubble Sort | Compares and swaps neighbouring elements successively |
+| 📊 Selection Sort | Finds the smallest element and places it in the correct position |
+| ✅ Regex | Format validation for email, password, and date |
+| 💾 JSON Persistence | Data loaded on startup and saved on exit |
+| ⚠️ Exceptions | Error handling with try/except in file operations |
+| 📤 CSV Export | List exported to an Excel-compatible file |
+| 📝 Logs | Automatic action logging with date and time |
 
 ---
 
-## 👩‍💻 Autora
+## 👩‍💻 Author
 
-Este projeto foi desenvolvido por **Cláudia Alfieri** como projeto final da disciplina de Programação em Python do curso CET TPSI na ATEC.
+This project was developed by **Cláudia Alfieri** as the final project for the Python Programming course of the CET TPSI program at ATEC.
 
 ---
 
-Feito com ❤️, muitos `print()` e algum `try/except` pelo caminho 🐍🚀
+Made with ❤️, lots of `print()` statements, and a fair amount of `try/except` along the way 🐍🚀
